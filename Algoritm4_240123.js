@@ -22,3 +22,5 @@ function merge(arr1, arr2) {
 let arr1 = [1, 3, 5];
 let arr2 = [2, 4, 6, 7, 8, 9];
 console.log(merge(arr1, arr2));
+
+
