@@ -1,3 +1,4 @@
+// быстрая сортировка с использованием опорного элемента
 function quickSort(arr) {
     if (arr.length <= 1) return arr;
     let pivot = arr[arr.length - 1];
