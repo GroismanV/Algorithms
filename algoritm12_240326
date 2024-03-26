@@ -1,0 +1,57 @@
+function hexidecimalToDecimal(num16) {
+    let obj = {
+        0: 0,
+        1: 1,
+        2: 2,
+        3: 3,
+        4: 4,
+        5: 5,
+        6: 6,
+        7: 7,
+        8: 8,
+        9: 9,
+        A: 10,
+        B: 11,
+        C: 12,
+        D: 13,
+        E: 14,
+        F: 15,
+    };
+    let num10 = 0;
+    for (let i = 0; i < num16.length; i++) {
+        num10 += Math.pow(16, num16.length - 1 - i) * obj[num16[i]];
+    }
+    return num10;
+}
+
+console.log(hexidecimalToDecimal("AB235"));
+
+    return decimal;
+
+
+function decimalToHexadecimal(num10) {
+    let i = 0;
+    while (num10 >= Math.pow(16, i)) {
+        i++;
+    }
+    i--;
+
+    let num16 = "";
+    for (let j = i; j >= 0; j--) {
+        let count = 0;
+        while (num10 >= Math.pow(16, j)) {
+            num10 -= Math.pow(16, j);
+            count++;
+        }
+        if (count == 10) num16 += "A";
+        else if (count == 11) num16 += "B";
+        else if (count == 12) num16 += "C";
+        else if (count == 13) num16 += "D";
+        else if (count == 14) num16 += "E";
+        else if (count == 15) num16 += "F";
+        else num16 += count;
+    }
+    return num16;
+}
+
+console.log(decimalToHexadecimal(254));
